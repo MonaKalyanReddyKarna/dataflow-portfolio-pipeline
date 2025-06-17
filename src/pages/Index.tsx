@@ -19,7 +19,7 @@ const Index = () => {
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on('change', (latest) => {
-      if (latest > 0.8) {
+      if (latest > 0.7) {
         setShowDataLake(true);
       }
     });
@@ -27,7 +27,7 @@ const Index = () => {
   }, [scrollYProgress]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 text-white overflow-x-hidden">
       {/* Animated Pipeline Background */}
       <PipelineBackground progress={pipelineProgress} />
       
@@ -42,10 +42,10 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               K Mona Kalyan Reddy
             </h1>
-            <h2 className="text-3xl mb-6 text-blue-300">Data Engineer</h2>
+            <h2 className="text-3xl mb-6 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">Data Engineer</h2>
             <p className="text-xl max-w-2xl mx-auto text-gray-300">
               Building scalable data pipelines and transforming raw data into actionable insights
             </p>
@@ -87,9 +87,9 @@ const Index = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-4xl mx-auto">
-          <Card className="bg-slate-800/50 border-blue-500/30 backdrop-blur-sm">
+          <Card className="bg-slate-800/50 border-cyan-500/30 backdrop-blur-sm shadow-2xl">
             <CardHeader>
-              <CardTitle className="text-3xl text-center text-cyan-400">About Me</CardTitle>
+              <CardTitle className="text-3xl text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">About Me</CardTitle>
             </CardHeader>
             <CardContent className="text-lg text-gray-300 leading-relaxed">
               <p>
@@ -131,31 +131,31 @@ const Index = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-4xl mx-auto">
-          <Card className="bg-slate-800/50 border-green-500/30 backdrop-blur-sm">
+          <Card className="bg-slate-800/50 border-purple-500/30 backdrop-blur-sm shadow-2xl">
             <CardHeader>
-              <CardTitle className="text-3xl text-center text-green-400">Achievements</CardTitle>
+              <CardTitle className="text-3xl text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Achievements</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <motion.div 
-                  className="p-4 bg-green-900/20 rounded-lg"
-                  whileHover={{ scale: 1.05 }}
+                  className="p-4 bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20"
+                  whileHover={{ scale: 1.05, borderColor: 'rgba(168, 85, 247, 0.5)' }}
                 >
-                  <h4 className="text-green-400 font-semibold mb-2">🏆 Tech Hackathon 2024</h4>
+                  <h4 className="text-purple-400 font-semibold mb-2">🏆 Tech Hackathon 2024</h4>
                   <p className="text-gray-300">Won 1st place building scalable cloud-based applications</p>
                 </motion.div>
                 <motion.div 
-                  className="p-4 bg-green-900/20 rounded-lg"
-                  whileHover={{ scale: 1.05 }}
+                  className="p-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-lg border border-cyan-500/20"
+                  whileHover={{ scale: 1.05, borderColor: 'rgba(34, 211, 238, 0.5)' }}
                 >
-                  <h4 className="text-green-400 font-semibold mb-2">🚀 Open Source Contributor</h4>
+                  <h4 className="text-cyan-400 font-semibold mb-2">🚀 Open Source Contributor</h4>
                   <p className="text-gray-300">Active contributor to Java development and cloud technologies</p>
                 </motion.div>
                 <motion.div 
-                  className="p-4 bg-green-900/20 rounded-lg md:col-span-2"
-                  whileHover={{ scale: 1.02 }}
+                  className="p-4 bg-gradient-to-r from-blue-900/20 to-indigo-900/20 rounded-lg border border-blue-500/20 md:col-span-2"
+                  whileHover={{ scale: 1.02, borderColor: 'rgba(59, 130, 246, 0.5)' }}
                 >
-                  <h4 className="text-green-400 font-semibold mb-2">💻 Problem Solver</h4>
+                  <h4 className="text-blue-400 font-semibold mb-2">💻 Problem Solver</h4>
                   <p className="text-gray-300">Solved 250+ coding problems on LeetCode and HackerRank, focusing on algorithms and data structures</p>
                 </motion.div>
               </div>
